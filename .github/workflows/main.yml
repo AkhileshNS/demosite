@@ -12,5 +12,5 @@ jobs:
       - uses: actions/checkout@v2
       - uses: akhileshns/netlify-deploy@master
         with:
-          netlify_access_token: ${{secrets.HEROKU_API_KEY}}
+          netlify_access_token: ${{secrets.NETLIFY_ACCESS_TOKEN}}
           site_name: "akhileshns-demosite"
