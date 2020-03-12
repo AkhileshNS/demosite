@@ -1,0 +1,16 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - react
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/netlify-deploy@master
+        with:
+          netlify_access_token: ${{secrets.NETLIFY_ACCESS_TOKEN}}
+          site_name: "akhileshns-demosite"
